@@ -80,12 +80,14 @@
     <div class="inner">
         <h2>添加品牌</h2>
         <div class="info">
+            <form action="/AddServlet" method="post">
         <label for="serialNum">序号：</label><input type="text" id="serialNum" name="id"><br>
         <label for="brandName">品牌名称：</label><input type="text" id="brandName" name="brandName"><br>
         <label for="companyName">企业名称：</label><input type="text" id="companyName" name="companyName"><br>
         <label for="ordered">排序</label><input type="text" id="ordered" name="ordered"><br>
         <label for="description">品牌介绍：<br></label><textarea name="description" id="description" cols="20"
                                                             rows="5"></textarea>
+            </form>
         </div>
         <div class="cd">
             <button type="submit">确定</button>

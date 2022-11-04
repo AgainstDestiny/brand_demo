@@ -1,3 +1,4 @@
+cn\itaxu\web\AddServlet.class
 cn\itaxu\pojo\Brand.class
 cn\itaxu\mapper\BrandMapper.class
 cn\itaxu\service\BrandService.class
