@@ -16,8 +16,10 @@ import java.util.List;
  * @author: Axu
  * @date:2022/11/4 21:13
  */
-@WebServlet("/BrandServlet")
-public class BrandServlet extends HttpServlet {
+@WebServlet("/SelectAllServlet")
+public class SelectAllServlet extends HttpServlet {
+   private BrandService brandService = new BrandService();
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
@@ -27,8 +29,14 @@ public class BrandServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // 1.调用BrandService完成查询
-        BrandService brandService = new BrandService();
         List<Brand> brands = brandService.selectAll();
+
+        // 2.存入request域中
+        request.setAttribute("brands",brands);
+
+        // 3.转发到brand.jsp
+        request.getRequestDispatcher("brand.jsp").forward(request,response);
+
 
     }
 }

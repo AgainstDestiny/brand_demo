@@ -14,7 +14,7 @@ import java.util.List;
  * @date:2022/11/4 21:04
  */
 public class BrandService {
-    private SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
+   SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
     /**
      * 查询所有
