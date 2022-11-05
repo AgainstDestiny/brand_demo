@@ -27,5 +27,5 @@ public interface BrandMapper {
      */
     @Insert("insert into add (id,brandName,companyName,ordered,description) values(#{id},#{brandName},#{companyName}," +
             "#{ordered},#{description})")
-    int add(Brand brand);
+    void add(Brand brand);
 }

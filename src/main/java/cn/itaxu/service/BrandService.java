@@ -34,13 +34,12 @@ public class BrandService {
         return brands;
     }
 
-    public int add(Brand brand){
+    public void add(Brand brand){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
-        int count = mapper.add(brand);
+         mapper.add(brand);
         sqlSession.commit();
         sqlSession.close();
-        return count;
     }
 
 }

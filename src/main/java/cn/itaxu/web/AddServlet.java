@@ -42,11 +42,6 @@ public class AddServlet extends HttpServlet {
         brand.setOrdered(ordered);
         brand.setDescription(description);
         // 调用BrandMapper.add()
-        int count = brandService.add(brand);
-        if (count != 1){
-            System.out.println("添加成功!");
-        }else {
-            System.out.println("添加失败!");
-        }
+        brandService.add(brand);
     }
 }
