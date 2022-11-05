@@ -13,11 +13,11 @@ import java.io.IOException;
 /**
  * @Description: ${PACKAGE_NAME}
  * @author: Axu
- * @date:2022/11/4 22:50
+ * @date:2022/11/5 9:56
  */
-@WebServlet("/AddServlet")
-public class AddServlet extends HttpServlet {
-    private BrandService brandService = new BrandService();
+@WebServlet("/UpdateServlet")
+public class UpdateServlet extends HttpServlet {
+    private BrandService service = new BrandService();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,24 +28,19 @@ public class AddServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 解决POST请求中文乱码问题
         request.setCharacterEncoding("UTF-8");
-        // 1.接收表单数据
+        // 1.接收提交过来的表单数据
         String id = request.getParameter("id");
         String brandName = request.getParameter("brandName");
         String companyName = request.getParameter("companyName");
         String ordered = request.getParameter("ordered");
         String description = request.getParameter("description");
         String status = request.getParameter("status");
-        // 封装User对象
-        Brand brand = new Brand();
-        brand.setId(Integer.parseInt(id));
-        brand.setBrandName(brandName);
-        brand.setCompanyName(companyName);
-        brand.setOrdered(Integer.parseInt(ordered));
-        brand.setDescription(description);
-        brand.setStatus(Integer.parseInt(status));
-        // 调用BrandMapper.add()
-        brandService.add(brand);
-        // 转发到查询所有的SelectAllServlet
+        // 2.封装对象
+        Brand brand = new Brand(Integer.parseInt(id), brandName, companyName, Integer.parseInt(ordered), description,
+                Integer.parseInt(status));
+        // 3.调用service
+        service.update(brand);
+        // 4.转发到SelectAllServlet
         request.getRequestDispatcher("/SelectAllServlet").forward(request,response);
     }
 }

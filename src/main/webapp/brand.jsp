@@ -43,7 +43,7 @@
             margin-left: 80px;
         }
         .cd{
-            margin: 30px 0 0 170px;
+            margin: 30px 0 0 85px;
             width: 150px;
             height: 50px;
             display: flex;
@@ -52,7 +52,7 @@
         .info{
             margin-left: 90px;
         }
-        button{
+       .cd button,.cd input{
             width: 60px;
             cursor: pointer;
             border: none;
@@ -63,7 +63,7 @@
         input{
             outline: none;
         }
-        button:hover{
+       .cd button:hover,.cd input:hover{
             color: #fff;
         }
         h2{
@@ -71,6 +71,15 @@
         }
         .add{
             cursor: pointer;
+        }
+        #status{
+            margin-left: 15px;
+        }
+        .status{
+            margin-left: 30px;
+        }
+        .mask1{
+            display: none;
         }
     </style>
 </head>
@@ -86,12 +95,15 @@
         <label for="companyName">企业名称：</label><input type="text" id="companyName" name="companyName"><br>
         <label for="ordered">排序</label><input type="text" id="ordered" name="ordered"><br>
         <label for="description">品牌介绍：<br></label><textarea name="description" id="description" cols="20"
-                                                            rows="5"></textarea>
+                                                            rows="5"></textarea><br>
+                <label for="status" class="status">状态：</label>
+                <input type="radio" name="status" id="status" value="0">禁用
+                <input type="radio" name="status" value="1">启用
+                <div class="cd">
+                    <input type="submit" value="确定">
+                    <button class="cancel">取消</button>
+                </div>
             </form>
-        </div>
-        <div class="cd">
-            <button type="submit">确定</button>
-            <button class="cancel">取消</button>
         </div>
     </div>
 </div>
@@ -115,18 +127,18 @@
         <td>${brand.getOrdered()}</td>
         <td>${brand.getDescription()}</td>
         <td>${brand.getStatusStr()}</td>
-        <td><a href="#">修改</a> <a href="#">删除</a></td>
+        <td><a href="/SelectByIdServlet?id=${brand.id}">修改</a> <a href="#">删除</a></td>
     </tr>
   </c:forEach>
 </table>
 <script>
     $(function () {
-        $('.cd').on('click','button',function () {
+        $('.cd').on('click','button,input',function () {
             $('.mask').hide()
         });
         $('.add').on('click',function () {
             $('.mask').show()
-        })
+        });
     })
 </script>
 </body>

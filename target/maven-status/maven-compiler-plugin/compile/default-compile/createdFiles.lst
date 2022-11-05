@@ -4,3 +4,5 @@ cn\itaxu\mapper\BrandMapper.class
 cn\itaxu\service\BrandService.class
 cn\itaxu\web\SelectAllServlet.class
 cn\itaxu\util\SqlSessionFactoryUtils.class
+cn\itaxu\web\SelectByIdServlet.class
+cn\itaxu\web\UpdateServlet.class

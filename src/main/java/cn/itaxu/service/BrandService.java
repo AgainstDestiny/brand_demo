@@ -34,10 +34,41 @@ public class BrandService {
         return brands;
     }
 
+    /**
+     * 添加品牌数据
+     * @param brand
+     */
     public void add(Brand brand){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
-         mapper.add(brand);
+        mapper.add(brand);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    /**
+     * 根据 id 查询
+     * @param id
+     * @return
+     */
+    public Brand selectById(int id){
+        // 调用BrandMapper.selectAll()
+
+        // 2.获取SqlSession
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        // 3.获取BrandMapper
+        BrandMapper userMapper = sqlSession.getMapper(BrandMapper.class);
+        // 4.调用方法
+        Brand brand = userMapper.selectById(id);
+        // 5.释放资源
+        sqlSession.close();
+        return brand;
+    }
+
+    public void update(Brand brand){
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
+        mapper.update(brand);
         sqlSession.commit();
         sqlSession.close();
     }
