@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../img/bg.jpg") no-repeat top center;
+}
+.box{
+    position: relative;
+    margin: 150px auto;
+    width: 400px;
+    height: 420px;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.inner{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: #fff;
+    font-family: sans-serif,"微软雅黑";
+}
+.inner h2{
+    font-family: sans-serif,"微软雅黑";
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.inner input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.combination{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.cd{
+    display: flex;
+    margin-bottom: 10px;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%);
+}
+.login{
+    margin-bottom: 10px;
+}
+.reg,.login{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #c0aab1;
+    color: #ffffff;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.c{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    margin-left: -8px;
+}
+#r{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+.err_msg{
+    position: absolute;
+    left: 144px;
+    font-size: 14px;
+    color: red;
+}

@@ -1,8 +1,14 @@
 D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\SelectByIdServlet.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\mapper\BrandMapper.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\pojo\Brand.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\LoginServlet.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\UpdateServlet.java
 D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\service\BrandService.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\service\UserService.java
 D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\util\SqlSessionFactoryUtils.java
 D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\SelectAllServlet.java
 D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\AddServlet.java
-D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\mapper\BrandMapper.java
-D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\pojo\Brand.java
-D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\UpdateServlet.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\mapper\UserMapper.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\CaptchaServlet.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\web\CheckServlet.java
+D:\19578\IdeaProjects\M-DEMO\brand_demo\src\main\java\cn\itaxu\pojo\User.java

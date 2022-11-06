@@ -84,6 +84,7 @@
     </style>
 </head>
 <body>
+<h1>${success}</h1>
 <input type="button" value="新增" class="add"><br>
 <div class="mask">
     <div class="inner">
